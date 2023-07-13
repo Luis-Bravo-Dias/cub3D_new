@@ -6,7 +6,7 @@
 /*   By: lleiria- <lleiria-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 22:29:17 by nvideira          #+#    #+#             */
-/*   Updated: 2023/07/12 17:23:00 by lleiria-         ###   ########.fr       */
+/*   Updated: 2023/07/13 15:46:15 by lleiria-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,13 @@ int	key_press(int keycode)
 	if (keycode == ESC_KEY)
 		ft_close();
 	else if (keycode == D_KEY)
-		move_rsw();
+		vars()->key->d = 1;
 	else if (keycode == A_KEY)
-		move_lsw();
+		vars()->key->a = 1;
 	else if (keycode == W_KEY)
-		move_fwd();
+		vars()->key->w = 1;
 	else if (keycode == S_KEY)
-		move_bwd();
+		vars()->key->s = 1;
 	else if (keycode == LEFT_KEY)
 		rotate(1);
 	else if (keycode == RIGHT_KEY)
@@ -88,6 +88,7 @@ int	key_press(int keycode)
 
 int	key_release(int keycode)
 {
+	printf("keycode: %d\n", keycode);
 	if (keycode == D_KEY)
 		vars()->key->d = 0;
 	else if (keycode == A_KEY)

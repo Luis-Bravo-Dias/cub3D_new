@@ -6,7 +6,7 @@
 /*   By: lleiria- <lleiria-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 12:08:21 by lleiria-          #+#    #+#             */
-/*   Updated: 2023/07/12 17:24:16 by lleiria-         ###   ########.fr       */
+/*   Updated: 2023/07/13 16:08:25 by lleiria-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,10 +215,11 @@ int		ft_close(void);
 int		key_press(int keycode);
 int		key_release(int keycode);
 void	rotate(int dir);
-void	move_fwd(void);
-void	move_bwd(void);
-void	move_lsw(void);
-void	move_rsw(void);
+void 	lets_move(int ws, int ad);
+// void	move_fwd(void);
+// void	move_bwd(void);
+// void	move_lsw(void);
+// void	move_rsw(void);
 void	fps_count(void);
 
 #endif

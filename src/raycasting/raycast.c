@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lleiria- <lleiria-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 14:18:49 by ubuntu            #+#    #+#             */
-/*   Updated: 2023/05/18 12:53:17 by ubuntu           ###   ########.fr       */
+/*   Updated: 2023/07/13 16:08:21 by lleiria-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	raycast_main(void)
 	int	x;
 
 	x = 0;
+	lets_move(vars()->key->w - vars()->key->s, vars()->key->a - vars()->key->d);
 	vars()->img->img = mlx_new_image(vars()->mlx, WIN_WID, WIN_HEI);
 	vars()->img->addr = mlx_get_data_addr(vars()->img->img,	&vars()->img->bits_per_pixel, &vars()->img->line_length, &vars()->img->endian);
 	while (x < WIN_WID)
